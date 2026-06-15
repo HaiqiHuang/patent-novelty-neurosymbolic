@@ -41,13 +41,11 @@ patent-novelty-neurosymbolic/
 ├── data/
 │   ├── raw/              # Original downloaded datasets, not tracked by Git
 │   ├── processed/        # Processed training files, not tracked by Git
+│   └── smoke_test/       # Smoke test files, not tracked by Git
 │   └── external/         # External ontologies / knowledge graph files
 │
-├── models/               # Model checkpoints, not tracked by Git
 ├── notebooks/            # Exploratory notebooks
 ├── scripts/              # Reproducible data-processing and experiment scripts
-├── src/                  # Source code
-├── experiments/          # Experiment configs and logs
 ├── outputs/              # Prediction results and evaluation outputs
 ├── docs/                 # Research notes and design documents
 ├── README.md
@@ -57,6 +55,8 @@ patent-novelty-neurosymbolic/
 ## Dataset
 
 The PatentMatch dataset is not included in this repository.
+
+The official dateset download address is: https://hpi.de/naumann/projects/web-science/paar-patent-analysis-and-retrieval/patentmatch.html
 
 Please download the PatentMatch dataset manually and place the files under:
 
