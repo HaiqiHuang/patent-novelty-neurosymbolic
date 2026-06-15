@@ -112,8 +112,9 @@ This script checks:
 - [x] Create project structure
 - [x] Download PatentMatch ultra-balanced dataset
 - [x] Inspect raw PatentMatch files
-- [ ] Convert PatentMatch into a clean sentence-pair classification format
-- [ ] Train a PatentBERT baseline
+- [x] Convert PatentMatch into a clean sentence-pair classification format
+- [ ] Train a BertBaseUncased Baseline
+- [ ] Train a BertForPatents baseline
 - [ ] Evaluate baseline retrieval/classification performance
 - [ ] Analyze failure cases involving hypernym-hyponym mismatch
 - [ ] Introduce ontology-based symbolic reasoning

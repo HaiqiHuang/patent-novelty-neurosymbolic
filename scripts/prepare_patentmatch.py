@@ -2,7 +2,6 @@ from pathlib import Path
 
 import pandas as pd
 
-
 RAW_DIR = Path("data/raw")
 PROCESSED_DIR = Path("data/processed")
 
@@ -51,7 +50,7 @@ def load_and_clean(input_file: Path) -> pd.DataFrame:
     df = df[
         (df["patent_application"] != "")
         & (df["prior_art"] != "")
-    ].copy()
+        ].copy()
 
     valid_labels = {0, 1}
     invalid_labels = set(df["novelty"].unique()) - valid_labels
@@ -62,9 +61,9 @@ def load_and_clean(input_file: Path) -> pd.DataFrame:
 
 
 def stratified_train_valid_split(
-    df: pd.DataFrame,
-    valid_ratio: float,
-    random_seed: int,
+        df: pd.DataFrame,
+        valid_ratio: float,
+        random_seed: int,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Split dataframe into train and valid sets while preserving label distribution."""
     valid_indices = (

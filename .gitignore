@@ -1,6 +1,8 @@
 # Python
 __pycache__/
 *.pyc
+*.py[cod]
+*$py.class
 .venv/
 .env
 
@@ -10,21 +12,32 @@ __pycache__/
 # macOS
 .DS_Store
 
+# IDE
+.idea/
+.vscode/
+
 # Data
 data/raw/
 data/processed/
 data/external/
+data/smoke_test/
 
 # Models and outputs
 models/
 outputs/
-experiments/*/checkpoints/
+checkpoints/
 
 # Logs
 *.log
 wandb/
 runs/
 
-# IDE
-.idea/
-.vscode/
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
