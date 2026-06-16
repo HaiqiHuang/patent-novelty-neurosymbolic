@@ -112,7 +112,7 @@ def main():
     )
 
     print(f"Loading tokenizer from: {args.model_name}")
-    tokenizer = BertTokenizer.from_pretrained(args.model_name)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
 
     def tokenize_examples(examples):
         return tokenizer(
@@ -131,13 +131,20 @@ def main():
     tokenized_dataset = tokenized_dataset.rename_column("novelty", "labels")
 
     print(f"Loading model from: {args.model_name}")
+    print("Tokenized train columns:", tokenized_dataset["train"].column_names)
+    print("First example keys:", tokenized_dataset["train"][0].keys())
+    print("First label:", tokenized_dataset["train"][0]["labels"])
+    print("First input_ids length:", len(tokenized_dataset["train"][0]["input_ids"]))
+    print("First token_type_ids unique:", set(tokenized_dataset["train"][0]["token_type_ids"]))
+    print("First attention_mask sum:", sum(tokenized_dataset["train"][0]["attention_mask"]))
+    print("First decoded text:")
 
-    config = BertConfig.from_pretrained(
+    config = AutoConfig.from_pretrained(
         args.model_name,
         num_labels=2,
     )
 
-    model = BertForSequenceClassification.from_pretrained(
+    model = AutoModelForSequenceClassification.from_pretrained(
         args.model_name,
         config=config,
         ignore_mismatched_sizes=True,
