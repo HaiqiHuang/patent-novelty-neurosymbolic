@@ -92,6 +92,23 @@ def compute_metrics(eval_pred):
 def main():
     args = parse_args()
 
+    print("===== Training Configuration =====")
+    print(f"model_name: {args.model_name}")
+    print(f"train_file: {args.train_file}")
+    print(f"valid_file: {args.valid_file}")
+    print(f"output_dir: {args.output_dir}")
+    print(f"max_length: {args.max_length}")
+    print(f"learning_rate: {args.learning_rate}")
+    print(f"num_train_epochs: {args.num_train_epochs}")
+    print(f"train_batch_size: {args.train_batch_size}")
+    print(f"eval_batch_size: {args.eval_batch_size}")
+    print(f"gradient_accumulation_steps: {args.gradient_accumulation_steps}")
+    print(f"effective_batch_size: {args.train_batch_size * args.gradient_accumulation_steps}")
+    print(f"warmup_ratio: {args.warmup_ratio}")
+    print(f"fp16: {args.fp16}")
+    print("metric_for_best_model: eval_macro_f1")
+    print("==================================")
+
     dataset = load_dataset(
         "csv",
         data_files={
@@ -144,7 +161,7 @@ def main():
         logging_strategy="steps",
         logging_steps=20,
         load_best_model_at_end=True,
-        metric_for_best_model="destroying_f1",
+        metric_for_best_model="eval_macro_f1",
         greater_is_better=True,
         report_to="none",
     )
