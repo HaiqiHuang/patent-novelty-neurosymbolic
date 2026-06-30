@@ -20,18 +20,20 @@ def parse_args():
 
     parser.add_argument("--train_file", type=str, default="data/processed/train.csv")
     parser.add_argument("--valid_file", type=str, default="data/processed/valid.csv")
-    # 修改1: 默认模型换为 large
+    # 默认模型换为 large
     parser.add_argument("--model_name", type=str, default="google-bert/bert-large-uncased")
     parser.add_argument("--output_dir", type=str, default="outputs/bert_large_uncased_baseline")
 
     parser.add_argument("--max_length", type=int, default=512)
-    # 修改2: 默认学习率调低，适应 large
+    # 默认学习率调低，适应 large
     parser.add_argument("--learning_rate", type=float, default=1e-5)
     parser.add_argument("--num_train_epochs", type=int, default=3)
-    # 修改3: 默认 batch size 降为 2，防止 OOM
+    # 默认 batch size 降为 2，防止 OOM
     parser.add_argument("--train_batch_size", type=int, default=2)
     parser.add_argument("--eval_batch_size", type=int, default=2)
     parser.add_argument("--weight_decay", type=float, default=0.01)
+    # 增加seed提高可复现性
+    parser.add_argument("--seed", type=int, default=42)
 
     # === 新增：BERT Large 必备护航参数 ===
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8,
@@ -106,7 +108,7 @@ def main():
     print(f"effective_batch_size: {args.train_batch_size * args.gradient_accumulation_steps}")
     print(f"warmup_ratio: {args.warmup_ratio}")
     print(f"fp16: {args.fp16}")
-    print("metric_for_best_model: eval_macro_f1")
+    print("metric_for_best_model: macro_f1")
     print("==================================")
 
     dataset = load_dataset(
@@ -151,18 +153,20 @@ def main():
         num_train_epochs=args.num_train_epochs,
         weight_decay=args.weight_decay,
 
-        # 注入护航参数
+        # 注入large护航参数
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         warmup_ratio=args.warmup_ratio,
-        fp16=args.fp16,  # 混合精度训练
+        fp16=args.fp16,
 
         eval_strategy="epoch",
         save_strategy="epoch",
         logging_strategy="steps",
         logging_steps=20,
         load_best_model_at_end=True,
-        metric_for_best_model="eval_macro_f1",
+        metric_for_best_model="macro_f1",
         greater_is_better=True,
+        seed=args.seed,
+        data_seed=args.seed,
         report_to="none",
     )
 
@@ -177,6 +181,14 @@ def main():
     )
 
     trainer.train()
+
+    print("===== Best Model Info =====")
+    print("Best metric:", trainer.state.best_metric)
+    print("Best checkpoint:", trainer.state.best_model_checkpoint)
+    print("===========================")
+
+    print(f"seed: {args.seed}")
+    print("metric_for_best_model: macro_f1")
 
     print("Final validation evaluation:")
     print(trainer.evaluate())
