@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<claims>
+  <claim id="CLM-00001">
+    <claim-num>1.</claim-num>
+    <claim-text>A process for preparing a liquid food product comprising: a) a first step comprising obtaining an oat flour by milling peeled oat grain; b) a second step comprising mixing the oat flour with water to obtain mixture B; c) a third step comprising adding at least one glycosidase to mixture B, and heating mixture B at a rate of 1 to 10 °C per minute to a maximum of 80 °C, obtaining a mixture C comprising a liquid portion containing particles in suspension and a precipitating portion; and d) a step comprising lowering the temperature of mixture C or the liquid portion of mixture C, and adding to mixture C or the liquid portion of mixture C a combination of at least a protease, a deamidase and a transglutaminase; wherein step d) is implemented by d1) a fourth step comprising lowering the temperature of mixture C to a maximum of 30 °C and adding to mixture C a combination of at least a protease, a deamidase and a transglutaminase to obtain mixture D; the process further comprising e1) a fifth step comprising incubating mixture D; and f1) a sixth step comprising the separation of the liquid portion and the precipitating portion of mixture D to obtain the liquid food product; or wherein step d) is implemented by e2) a fifth step comprising lowering the temperature of the liquid portion of mixture C to a maximum of 2°C and adding to the liquid portion of mixture C a combination of at least a protease, a deamidase and a transglutaminase to obtain liquid portion D; the process further comprising d2) a fourth step preceding step e2) comprising the separation of the liquid portion and the precipitating portion of mixture C; and f2) a sixth step following step e2) comprising incubating the liquid portion D to obtain the liquid food product.</claim-text>
+  </claim>
+
+  <claim id="CLM-00002">
+    <claim-num>2.</claim-num>
+    <claim-text>The process according to claim 1, further comprising a seventh step g1) of submitting the liquid portion to a temperature drop of at least 1°C per minute to reach a temperature of of a maximum 2°C and/or an eighth step h) of microbiological stabilization of the obtained liquid portion.</claim-text>
+  </claim>
+
+  <claim id="CLM-00003">
+    <claim-num>3.</claim-num>
+    <claim-text>The process according to claims 1 or 2, wherein in step b) the oat flour is mixed with at least two glycosydases.</claim-text>
+  </claim>
+
+  <claim id="CLM-00004">
+    <claim-num>4.</claim-num>
+    <claim-text>The process according to claim 3, wherein the glycosidase is selected from the group consisting of a-amylase and p-glucanase.</claim-text>
+  </claim>
+
+  <claim id="CLM-00005">
+    <claim-num>5.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 4, wherein the oat flour is obtained by dry milling of oat grain or by wet milling of peeled oat grain or a combination of both.</claim-text>
+  </claim>
+
+  <claim id="CLM-00006">
+    <claim-num>6.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 5, wherein a a glycosydase, preferably an amyloglycosidase, is added together with the combination of at least a protease, a deamidase and a transglutaminase in steps (d1) or (e2).</claim-text>
+  </claim>
+
+  <claim id="CLM-00007">
+    <claim-num>7.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 6, wherein the protease is a carboxypeptidase and/or the deamidase is a protein-glutaminase.</claim-text>
+  </claim>
+
+  <claim id="CLM-00008">
+    <claim-num>8.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 7, wherein mixture B in step d) is heated up to a temperature comprised between 55 to 80 °C, preferably 70 to 80 °C.</claim-text>
+  </claim>
+
+  <claim id="CLM-00009">
+    <claim-num>9.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 8, wherein the concentration of deamidase, protease and transglutaminase in step c) is between 1000-8000 LI/100L of deamidase, between 40-200 LI/100L of protease and between 400-6500 LI/100L of transglutaminase with respect to the total volume of the liquid portion of mixture C.</claim-text>
+  </claim>
+
+  <claim id="CLM-00010">
+    <claim-num>10.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 9, wherein the incubation time in steps e1) or f2) is between 60 minutes and 48 hours.</claim-text>
+  </claim>
+
+  <claim id="CLM-00011">
+    <claim-num>11.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 10, wherein the temperature in step d1) is lowered to a temperature comprised between 30 and 60 °C, preferably to a temperature comprised between 45 and 55 °C.</claim-text>
+  </claim>
+
+  <claim id="CLM-00012">
+    <claim-num>12.</claim-num>
+    <claim-text>The process according to claim 11, wherein the temperature in step d1) is lowered to a temperature comprised between 45 and 55 °C and the incubation time in step f1) is between 80 and 160 minutes.</claim-text>
+  </claim>
+
+  <claim id="CLM-00013">
+    <claim-num>13.</claim-num>
+    <claim-text>The process according to any one of claims 1 to 10, wherein the temperature in step e2) is lowered to a temperature between 2 and 8 °C.</claim-text>
+  </claim>
+
+  <claim id="CLM-00014">
+    <claim-num>14.</claim-num>
+    <claim-text>Liquid food product obtained by the process according to any one of claims 1 to 13.</claim-text>
+  </claim>
+
+  <claim id="CLM-00015">
+    <claim-num>15.</claim-num>
+    <claim-text>A tea- or coffee-based beverage comprising the liquid food product according to claim 14.</claim-text>
+  </claim>
+
+  <claim id="CLM-00016">
+    <claim-num>16.</claim-num>
+    <claim-text>A process of preparing the tea- or coffee-based beverage defined in claim 15, comprising mixing tea or coffee at a temperature close to their boiling point with the liquid food product defined in claim 14.</claim-text>
+  </claim>
+
+  <claim id="CLM-00017">
+    <claim-num>17.</claim-num>
+    <claim-text>A process of preparing a liquid food product suitable for human consumers using the liquid food product of claim 14, wherein the liquid food product is the final product or a starting material of the process.</claim-text>
+  </claim>
+
+  <claim id="CLM-00018">
+    <claim-num>18.</claim-num>
+    <claim-text>The process according to claim 16, wherein the human consumers are celiac or intolerant to gluten and/or intolerant or allergic to dairy products.</claim-text>
+  </claim>
+</claims>

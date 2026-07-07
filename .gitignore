@@ -21,6 +21,7 @@ data/raw/
 data/processed/
 data/external/
 data/smoke_test/
+data/sanity_test
 
 # Models and outputs
 models/

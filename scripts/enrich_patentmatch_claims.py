@@ -1,0 +1,5 @@
+from enrich_patentmatch.epo.fetch_claims import fetch_claims_xml
+from enrich_patentmatch.epo.parse_ops_xml import parse_claims_from_xml
+from enrich_patentmatch.claims.match_claim import locate_sentence_in_claims
+from enrich_patentmatch.claims.parse_dependency import parse_dependency
+from enrich_patentmatch.claims.expand_paths import expand_paths
