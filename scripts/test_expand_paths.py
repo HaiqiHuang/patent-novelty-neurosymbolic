@@ -26,7 +26,7 @@ def main():
     print(f"Claim {claim_no} has {len(paths)} expanded paths.")
     print()
 
-    for path in paths[:5]:
+    for path in paths[:len(paths)]:
         print(path)
         print(render_claim_path(graph, path))
         print("-" * 80)
