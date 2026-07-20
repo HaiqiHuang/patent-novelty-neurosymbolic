@@ -9,6 +9,7 @@ from peft import (
     LoraConfig,
     TaskType,
     get_peft_model,
+    cast_mixed_precision_params,
 )
 from sklearn.metrics import (
     accuracy_score,
@@ -547,14 +548,12 @@ def main():
     print("Loading Qwen sequence classifier")
     print("=" * 80)
 
-    dtype = get_torch_dtype(args)
-
     model = (
         AutoModelForSequenceClassification
         .from_pretrained(
             args.model_name,
             num_labels=2,
-            torch_dtype=dtype,
+            dtype=torch.float32,
         )
     )
 
@@ -603,6 +602,17 @@ def main():
         model,
         lora_config,
     )
+
+    if args.use_fp16:
+        cast_mixed_precision_params(
+            model,
+            dtype=torch.float16,
+        )
+    elif args.use_bf16:
+        cast_mixed_precision_params(
+            model,
+            dtype=torch.bfloat16,
+        )
 
     model.print_trainable_parameters()
 
