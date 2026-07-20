@@ -17,11 +17,7 @@ __pycache__/
 .vscode/
 
 # Data
-data/raw/
-data/processed/
-data/external/
-data/smoke_test/
-data/sanity_test
+data/
 
 # Models and outputs
 models/
