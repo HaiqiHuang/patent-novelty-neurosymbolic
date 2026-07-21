@@ -174,6 +174,34 @@ def render_claim_path(graph: dict, path: list[int]) -> str:
 
     return "\n".join(parts)
 
+def build_pathwise_contexts(
+    graph: dict,
+    paths: list[list[int]],
+    target_claim_no: int,
+) -> list[dict]:
+    """
+    Convert expanded dependency paths into separate model instances.
+    """
+    if not paths:
+        paths = [[target_claim_no]]
+
+    contexts = []
+
+    for path_id, path in enumerate(paths):
+        contexts.append(
+            {
+                "target_claim_no": target_claim_no,
+                "path_id": path_id,
+                "path_claim_numbers": path,
+                "path_depth": len(path),
+                "path_text": render_claim_path(
+                    graph=graph,
+                    path=path,
+                ),
+            }
+        )
+
+    return contexts
 
 def collect_parent_claims_from_paths(
     paths: list[list[int]],
