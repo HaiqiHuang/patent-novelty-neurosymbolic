@@ -671,7 +671,11 @@ def main():
         ),
 
         save_total_limit=2,
-        report_to="none",
+        report_to="tensorboard",
+        logging_dir=os.path.join(
+            args.output_dir,
+            "tensorboard",
+        ),
 
         remove_unused_columns=True,
     )
